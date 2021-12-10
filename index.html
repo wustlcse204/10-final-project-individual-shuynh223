@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Recipe Search</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div id="leftHeader"><h2>Recipe Search:</h2></div>
+            <!-- <div id="rightHeader">
+                <button class="button">Search for a Recipe</button>
+            </div> -->
+        </div>
+
+        <div class="searchForm">
+            <form id="searchRecipe">
+                <div class="formHeader">
+                    <p class="formTitle">What recipe are you looking for?</p>
+                </div>
+
+                <div>
+                    <label for="input" class="labelDiet">Diet</label>
+                    <!-- <input type="text" id="task" placeholder="ToDo..."> -->
+
+                    <select class="diet" id="diet">
+                        <option value="balanced">Balanced</option>
+                        <option value="highFiber">High-fiber</option>
+                        <option value="highProtein">High-protein</option>
+                        <option value="lowCarb">Low-carb</option>
+                        <option value="lowFat">Low-fat</option>
+                        <option value="lowSodium">Low-Sodium</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <label for="task" class="labelHealth">Health</label>
+                    
+                    <select class="health" id="health">
+                        <option value="dairyFree">Dairy-Free</option>
+                        <option value="glutenFree">Gluten-Free</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="kosher">Kosher</option>
+                        <option value="paleo">Paleo</option>
+                        <option value="pescetarian">Pescetarian</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="task" class="labelCuisineType">Cuisine Type</label>
+
+                    <select class="cuisineType" id="cuisineType">
+                        <option value="American">American</option>
+                        <option value="Asian">Asian</option>
+                        <option value="British">British</option>
+                        <option value="French">French</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Mexican">Mexican</option>
+                    </select>
+                    
+                </div>
+
+                <div>
+                    <label for="task" class="labelMealType">Meal Type</label>
+                    
+                    <select class="mealType" id="mealType">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                </div>
+
+                <!-- <div>
+                    <label for="task" class="labelDishType"></label>
+                    
+                </div> -->
+
+                
+
+                <div>
+                    <button class="button" onclick="searchForRecipe()">Search for a Recipe</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="recipe">
+            <div class="recipeHeader">
+                <div id="recipeNamePlaceholder"><h2>Recipe Name Placeholder</h2></div>
+            </div>
+
+            <div class="recipeBody">
+                <img src="placeholder.jpeg" />
+            </div>
+        </div>
+
+
+        <script src="main.js"></script>
+    </body>
+</html>
