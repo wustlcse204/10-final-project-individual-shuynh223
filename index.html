@@ -10,87 +10,143 @@
     <body>
 
         <div class="header">
-            <div id="leftHeader"><h2>Recipe Search</h2></div>
+            <div class="leftHeader" id="leftHeader"><p>--------  Random Recipe Search  --------</p></div>
             <!-- <div id="rightHeader">
                 <button class="button">Search for a Recipe</button>
             </div> -->
         </div>
 
-        <div class="searchForm">
-            <form id="searchRecipe">
-                <div class="formHeader">
-                    <p class="formTitle">What recipe are you looking for?</p>
-                </div>
+        <div class="foodImages">
+            <img src="1.jpeg" class="headerImages" id="1">
+            <img src="2.jpeg" class="headerImages" id="2">
+            <img src="3.jpeg" class="headerImages" id="3">
 
-                <div>
-                    <label for="input" class="labelDiet">Diet</label>
-                    <!-- <input type="text" id="task" placeholder="ToDo..."> -->
-
-                    <select class="diet" id="diet">
-                        <option value="balanced">Balanced</option>
-                        <option value="highFiber">High-fiber</option>
-                        <option value="highProtein">High-protein</option>
-                        <option value="lowCarb">Low-carb</option>
-                        <option value="lowFat">Low-fat</option>
-                        <option value="lowSodium">Low-Sodium</option>
-                    </select>
-                </div>
-
-
-                <div>
-                    <label for="task" class="labelHealth">Health</label>
-                    
-                    <select class="health" id="health">
-                        <option value="dairyFree">Dairy-Free</option>
-                        <option value="glutenFree">Gluten-Free</option>
-                        <option value="vegan">Vegan</option>
-                        <option value="kosher">Kosher</option>
-                        <option value="paleo">Paleo</option>
-                        <option value="pescetarian">Pescetarian</option>
-                        <option value="vegetarian">Vegetarian</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="task" class="labelCuisineType">Cuisine Type</label>
-
-                    <select class="cuisineType" id="cuisineType">
-                        <option value="American">American</option>
-                        <option value="Asian">Asian</option>
-                        <option value="British">British</option>
-                        <option value="French">French</option>
-                        <option value="Indian">Indian</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Mexican">Mexican</option>
-                    </select>
-                    
-                </div>
-
-                <div>
-                    <label for="task" class="labelMealType">Meal Type</label>
-                    
-                    <select class="mealType" id="mealType">
-                        <option value="breakfast">Breakfast</option>
-                        <option value="lunch">Lunch</option>
-                        <option value="dinner">Dinner</option>
-                </div>
-
-                <button type="submit" value="Search" onsubmit="searchForRecipe()">Search for a Recipe</button>
-               
-                
-            </form>
         </div>
 
-        <div class="recipe">
-            <div class="recipeHeader">
-                <div id="recipeNamePlaceholder"><h2>Recipe Name Placeholder</h2></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="searchForm">
+                        <form name ="RecipeSearch" id="searchRecipe" onsubmit="openRecipe()">
+                            <div class="formHeader">
+                                <p class="formTitle">What recipe are you looking for?</p>
+                                <p class="formDescription">Find recipes that fit your dietary restrictions and satisfy your cravings.</p>
+                                
+                            </div>
+            
+                            <div class="dropdowns">
+            
+                                <div class="d">
+                                    <label for="input" class="labelDiet">Diet</label>
+                                
+            
+                                    <select name ="filter" class="diet" id="diet">
+                                    
+                                        <option value="balanced" type="Diet">Balanced</option>
+                                        <option value="high-fiber" type="Diet">High-fiber</option>
+                                        <!--<option value="High-protein" type="Diet">High-protein</option>-->
+                                        <option value="low-carb" type="Diet">Low-carb</option>
+                                        <option value="low-fat" type="Diet">Low-Fat</option>
+                                        <option value="low-sodium" type="Diet">Low-Sodium</option>
+                                    </select>
+                                </div>
+            
+            
+                                <div class="h">
+                                    <label for="task" class="labelHealth">Health</label>
+                                
+                                    <select name ="filter" class="health" id="health">
+                                        <option value="dairy-free" type="Health">Dairy-Free</option>
+                                        <option value="gluten-free" type="Health">Gluten-Free</option>
+                                        <option value="vegan" type="Health">Vegan</option>
+                                        <option value="kosher" type="Health">Kosher</option>
+                                        <option value="paleo" type="Health">Paleo</option>
+                                        <!--<option value="pescetarian" type="Health">Pescetarian</option>-->
+                                        <option value="vegetarian" type="Health">Vegetarian</option>
+                                    </select>
+                                </div>
+            
+                                <div class="c">
+                                    <label for="task" class="labelCuisineType">Cuisine Type</label>
+            
+                                    <select name ="filter" class="cuisineType" id="cuisineType">
+                                        <option value="American" type="cuisineType">American</option>
+                                        <option value="Asian" type="cuisineType">Asian</option>
+                                        <option value="British" type="cuisineType">British</option>
+                                        <option value="French" type="cuisineType">French</option>
+                                        <option value="Indian" type="cuisineType">Indian</option>
+                                        <option value="Italian" type="cuisineType">Italian</option>
+                                        <option value="Mexican" type="cuisineType">Mexican</option>
+                                    </select>
+                                
+                                </div>
+            
+                                <div class="m"> 
+                                    <label for="task" class="labelMealType">Meal Type</label>
+                                
+                                    <select name="filter" class="mealType" id="mealType">
+                                        <option value="Breakfast" type="mealType">Breakfast</option>
+                                        <option value="Lunch" type="mealType">Lunch</option>
+                                        <option value="Dinner" type="mealType">Dinner</option>
+                                </div>
+            
+                            </div>
+            
+                            <div class="subButton">
+
+                           
+                                    <input type="submit" class="sb" value="Submit" onsubmit="openRecipe()" >
+                            
+                  
+                            </div>
+            
+                        
+                            
+                            
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    
+                    <img src="4.jpeg" class="photo">
+            
+
+                </div>
             </div>
 
-            <div class="recipeBody">
-                <img src="placeholder.jpeg" />
+            <div class="row">
+                <div class="recipe" id="recipe">
+                    <div class="recipeHeader">
+                        <!--<div id="name"><p>Recipe Name</p></div>-->
+                        <div id="recipeNamePlaceholder" class="recipeNamePlaceholder"><h2></h2></div>
+                    </div>
+        
+                    <div class="noRecipeFound">
+                        <div id="no"><h2>No Recipe Found</h2></div>
+                    </div>
+        
+                    <div class="recipeBody">
+                        <img src="" id="imagePlaceholder" class="imagePlaceholder"/>
+                    </div>
+        
+        
+        
+                    <div class="recipeButton">
+                        <!--<button id="recipeLink" onclick="">Click Here for the Full Recipe!</button>-->
+                        <!--<input type="button" onclick="shareAs" value="Click Here for the Full Recipe!" />-->
+                        <a href="" id="recipeLink" class="recipeLink"><button class="RL">Click Here for the Full Recipe</button></a>
+        
+                    </div>
+
+                </div>
             </div>
         </div>
 
+        
+
+        
 
         <script src="main.js"></script>
     </body>
